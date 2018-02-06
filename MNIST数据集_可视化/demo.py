@@ -38,7 +38,7 @@ train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
 # /tmp/tensorflow/mnist/logs/mnist_with_summaries (by default)
 merged = tf.summary.merge_all()
 train_writer = tf.summary.FileWriter("./summary" + '/train', sess.graph)
-test_writer = tf.summary.FileWriter(".summary" + '/test')
+test_writer = tf.summary.FileWriter("./summary" + '/test')
 
 #返回的train_step操作对象，在运行时会使用梯度下降来更新参数
 for i in range(1000):
